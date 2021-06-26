@@ -201,7 +201,7 @@ def saveToXls(datalist,counter):
     wb.save(FN)   
 
 def uploadToDatabase(datalist):
-    Tecent_DATABASE = pymysql.connect("49.235.6.254","zengmiao","airwell123","trhData" )
+    Tecent_DATABASE = pymysql.connect("your database ip","your id","your Password","your database name" )
     cursor = Tecent_DATABASE.cursor()
     tupleData=tuple(datalist)        
     sql00 = "INSERT INTO dataShow_trh(record_date,ODU_Powerinput,ODU_PowerSum,ODU_tem,ODU_rh,IDU_1_Low_tem,IDU_1_mid_tem,IDU_1_mid_rh,IDU_1_high_tem,IDU_2_Low_tem,IDU_2_mid_tem,IDU_2_mid_rh,IDU_2_high_tem,Room_tem,Room_rh) VALUES "
